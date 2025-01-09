@@ -11,9 +11,9 @@ bool compare(const Room& p1,const Room& p2)
 {
     if (p1.s==p2.s)
     {
-        return p1.s<p2.s;
+        return p1.e<p2.e;
     }
-    return p1.e<p2.e;
+    return p1.s<p2.s;
 }
 int main(void)
 {
@@ -45,3 +45,4 @@ int main(void)
     cout<< pq.size();
     return 0;
 }
+
