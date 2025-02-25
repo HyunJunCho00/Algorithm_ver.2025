@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+queue<string>q;
+set<string>visited;
+void bfs(string s,string t)
+{
+    bool ch=false;
+    while (!q.empty())
+    {
+        string cur=q.front(),next; q.pop();
+        if (cur==t)
+        {
+            ch=true;break;
+        }
+        if (cur.length()>=t.length())continue;
+        next=cur;next.append("A");
+        if (visited.find(next)==visited.end())
+        {
+            q.push(next);visited.insert(next);
+        }  
+        next=cur;next.append("B");
+        reverse(next.begin(),next.end());
+        if (visited.find(next)==visited.end())
+        {
+            q.push(next);visited.insert(next);
+        }  
+    }
+    cout<<(ch?1:0)<<'\n';
+}
+int main(void)
+{
+    string s,t;cin>>s>>t;q.push(s);
+    bfs(s,t);
+    return 0;
+}
