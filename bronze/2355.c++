@@ -9,3 +9,13 @@ int main(void)
     cout<<(as<0?bs+as:bs-as)<<'\n';
     return 0;
 }
+////////////////////////////////////////////////////////////////////
+#include <bits/stdc++.h>
+using namespace std;
+int main(void)
+{
+    long long int a,b;cin>>a>>b;
+    if (a>b)swap(a,b);
+    cout<<((b+1)*b/2-(a-1)*a/2)<<'\n';
+    return 0;
+}
