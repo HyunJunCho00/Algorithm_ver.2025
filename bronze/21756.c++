@@ -16,3 +16,13 @@ int main(void)
     cout<<arr[1]<<'\n';
     return 0;
 }
+///////////////////////////////////////////////////////
+#include <bits/stdc++.h>
+using namespace std;
+int main(void)
+{
+    int n,i=1;cin>>n;
+    while(i<n)i*=2;
+    cout<<(i>n?i/2:i)<<'\n';
+    return 0;
+}
