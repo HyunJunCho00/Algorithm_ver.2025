@@ -1,0 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(void)
+{
+    long long int n,r,c;long long int box=0;
+    cin>>n>>r>>c;
+    cout<<(n==3?((r==2&&c==2)?1:4):((n%2)==0?n*n/2:(r+c)%2==0?1+n*n/2:n*n/2));
+    return 0;
+}
