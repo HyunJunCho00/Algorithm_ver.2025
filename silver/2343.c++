@@ -7,7 +7,7 @@ int search(int s,int e,vector<int>&arr,int m,int n)
     int ans=0;
     while(s<=e)
     {
-        int mid=s+(e-s)/2,com=0,mm=0;
+        int mid=(s+e)/2,com=0,mm=0;
         for(int i=1;i<=n;i++)
         {
             com+arr[i]>mid?(mm++,com=arr[i]):com+=arr[i];
