@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int solution(string s) 
+{
+    int answer = 0;
+    string ss="";
+    if (s[0]=='+')
+    {
+        for(int i=1;i<s.length();i++)
+        {
+            ss+=s[i];
+        }
+        answer=stoi(ss);
+    }
+    else if (s[0]=='-')
+    {
+        for(int i=1;i<s.length();i++)
+        {
+            ss+=s[i];
+        }
+        answer=-stoi(ss);
+    }
+    else
+    {
+        answer=stoi(s);
+    }
+    return answer;
+}
