@@ -3,7 +3,7 @@
 using namespace std;
 int answer=0;
 vector<int>save_number;
-void dfs(int n,vector<vector<int>>q,vector<int>ans,int s)
+void dfs(int n,vector<vector<int>>&q,vector<int>&ans,int s)
 {
     if (save_number.size()==5)
     {
